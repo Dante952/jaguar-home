@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo · Ferreterías y distribuidoras — Irbis Tech Solutions ERP</title>
+  <meta name="description" content="Demo de punto de venta y facturación electrónica SUNAT para ferreterías, distribuidoras y comercios mayoristas de Arequipa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="ferreteria" data-base="../">
+
+  <section class="section" style="padding:36px 0;">
+    <div class="container">
+      <span class="eyebrow">🏪 Ferreterías, distribuidoras y mayoristas</span>
+      <h1 style="margin-top:12px;font-size:clamp(28px,4vw,40px);">Boletea y factura ante SUNAT en segundos</h1>
+      <p class="lead" style="margin-top:12px;">
+        Cientos de productos, clientes que piden factura y la presión de SUNAT.
+        Busca cualquier ítem, cobra y emite el comprobante electrónico al instante —
+        con control de mermas y stock por producto.
+      </p>
+      <div style="margin-top:22px;" id="banner"></div>
+
+      <!-- IA -->
+      <div class="ai-box" style="margin-bottom:22px;">
+        <div class="ai-head">✨ Spark IA · análisis del mes</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          El <b>cemento</b> fue tu producto estrella este mes (32% de tus ventas), pero deja poco margen;
+          las <b>pinturas</b> rotan lento y tienes capital inmovilizado en ellas. Tus <b>mermas</b> se mantienen
+          bajas (0.4%). <b>Recomendación:</b> negocia mejor precio del cemento por volumen y arma una promoción
+          para liquidar la pintura de baja rotación.
+        </p>
+      </div>
+
+      <!-- POS -->
+      <div class="appframe">
+        <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="muted" style="font-size:13px;">Irbis ERP · Punto de venta</span></div>
+        <div class="appbody">
+          <div class="two-col">
+            <!-- carrito -->
+            <div class="card">
+              <div style="display:flex;gap:10px;margin-bottom:14px;">
+                <input style="flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 14px;color:var(--ink);font-size:14px;" value="🔎 Buscar producto o código de barras..." readonly />
+              </div>
+              <table class="data">
+                <thead><tr><th>Producto</th><th>Cant.</th><th style="text-align:right;">P. unit</th><th style="text-align:right;">Subtotal</th></tr></thead>
+                <tbody>
+                  <tr><td>Cemento Yura Tipo I 42.5kg</td><td>10</td><td style="text-align:right;">S/ 31.50</td><td style="text-align:right;">S/ 315.00</td></tr>
+                  <tr><td>Fierro corrugado 1/2" x 9m</td><td>8</td><td style="text-align:right;">S/ 28.90</td><td style="text-align:right;">S/ 231.20</td></tr>
+                  <tr><td>Alambre N°16 (kg)</td><td>5</td><td style="text-align:right;">S/ 6.80</td><td style="text-align:right;">S/ 34.00</td></tr>
+                  <tr><td>Clavos 3" (kg)</td><td>4</td><td style="text-align:right;">S/ 5.50</td><td style="text-align:right;">S/ 22.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- cobro -->
+            <div style="display:grid;gap:14px;align-content:start;">
+              <div class="card">
+                <div style="display:grid;gap:8px;font-size:14px;">
+                  <div style="display:flex;justify-content:space-between;"><span class="muted">Op. gravada</span><span>S/ 510.34</span></div>
+                  <div style="display:flex;justify-content:space-between;"><span class="muted">IGV (18%)</span><span>S/ 91.86</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:22px;font-weight:850;border-top:1px solid var(--line);padding-top:8px;"><span>Total</span><span>S/ 602.20</span></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="muted" style="font-size:13px;margin-bottom:8px;">Tipo de comprobante</div>
+                <div style="display:flex;gap:8px;">
+                  <span class="pill indigo" style="flex:1;justify-content:center;">Factura</span>
+                  <span class="pill" style="flex:1;justify-content:center;">Boleta</span>
+                </div>
+                <div style="margin-top:12px;font-size:13px;" class="muted">Cliente: <b style="color:var(--ink)">Constructora del Sur SAC</b><br/>RUC 20454987123</div>
+              </div>
+              <button class="btn btn-primary" style="justify-content:center;">Cobrar y emitir comprobante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPROBANTE EMITIDO -->
+      <h2 style="margin-top:48px;">Comprobante aceptado por SUNAT</h2>
+      <div class="two-col" style="margin-top:16px;">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><b style="font-size:17px;">FACTURA ELECTRÓNICA</b><div class="muted" style="font-size:13px;">F001 - 002847</div></div>
+            <span class="pill green">✓ Aceptada por SUNAT</span>
+          </div>
+          <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;font-size:13px;">
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Emisor</span><span>Ferretería El Constructor EIRL</span></div>
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Adquiriente</span><span>Constructora del Sur SAC</span></div>
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Total</span><b>S/ 602.20</b></div>
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Hash CDR</span><span style="font-family:monospace;">a3F9...c21d</span></div>
+          </div>
+        </div>
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+          <div style="width:110px;height:110px;border-radius:12px;background:repeating-conic-gradient(#081b33 0 25%, #ffffff 0 50%) 0 0/22px 22px;border:6px solid #fff;box-shadow:0 0 0 1px var(--line);"></div>
+          <p class="muted" style="font-size:12px;margin-top:12px;">Código QR · XML UBL 2.1 firmado<br/>digitalmente · enviado a SUNAT</p>
+        </div>
+      </div>
+
+      <!-- CONTROL DE STOCK Y MERMAS -->
+      <h2 style="margin-top:48px;">Cientos de productos bajo control</h2>
+      <div class="kpis" style="margin-top:18px;">
+        <div class="kpi"><div class="label">SKUs activos</div><div class="value">1 284</div><div class="delta up">catálogo completo</div></div>
+        <div class="kpi"><div class="label">Stock crítico</div><div class="value">17</div><div class="delta down">↓ requieren compra</div></div>
+        <div class="kpi"><div class="label">Mermas del mes</div><div class="value">S/ 340</div><div class="delta down">0.4% de ventas</div></div>
+        <div class="kpi"><div class="label">Ventas hoy</div><div class="value">S/ 8 920</div><div class="delta up">↑ 12% vs ayer</div></div>
+      </div>
+
+      <div class="card" style="margin-top:18px;padding:0;overflow:hidden;">
+        <table class="data">
+          <thead><tr><th>Producto</th><th>Categoría</th><th>Stock</th><th>Rotación</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Cemento Yura Tipo I 42.5kg</td><td>Cementos</td><td>240 bolsas</td><td>Alta</td><td><span class="pill green">OK</span></td></tr>
+            <tr><td>Pintura látex blanco 1gal</td><td>Pinturas</td><td>6 und</td><td>Media</td><td><span class="pill red">Stock crítico</span></td></tr>
+            <tr><td>Tubo PVC 4" desagüe</td><td>Gasfitería</td><td>18 und</td><td>Baja</td><td><span class="pill amber">Lento</span></td></tr>
+            <tr><td>Foco LED 9W</td><td>Electricidad</td><td>320 und</td><td>Alta</td><td><span class="pill green">OK</span></td></tr>
+            <tr><td>Candado 50mm</td><td>Seguridad</td><td>4 und</td><td>Media</td><td><span class="pill red">Stock crítico</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/app.js"></script>
+  <script>document.getElementById("banner").innerHTML = demoBanner("Así vendes, facturas y controlas tu stock.");</script>
+</body>
+</html>

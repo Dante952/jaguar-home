@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo · Empresas con varias sedes — Irbis Tech Solutions ERP</title>
+  <meta name="description" content="Demo del panel consolidado multi-sede en tiempo real para cadenas, constructoras y distribuidoras regionales. Plan Oro y Diamante." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="multisede" data-base="../">
+
+  <section class="section" style="padding:36px 0;">
+    <div class="container">
+      <span class="eyebrow">🏢 Empresas con 2+ sedes</span>
+      <h1 style="margin-top:12px;font-size:clamp(28px,4vw,40px);">Mira todas tus sedes en tiempo real, en una pantalla</h1>
+      <p class="lead" style="margin-top:12px;">
+        Para cadenas locales, constructoras y distribuidoras regionales. Deja de pedir reportes
+        por WhatsApp a cada local: el panel consolida ventas, inventario y caja de todas tus sedes,
+        con contabilidad unificada y un asistente de IA que ejecuta acciones por ti.
+      </p>
+      <div class="chip-row" style="margin-top:14px;"><span class="tag">Plan Oro</span><span class="tag">Plan Diamante</span></div>
+
+      <div style="margin-top:22px;" id="banner"></div>
+
+      <!-- IA -->
+      <div class="ai-box" style="margin-bottom:22px;">
+        <div class="ai-head">✨ Spark IA · análisis del mes</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          <b>Cercado</b> concentra el 38% de las ventas, pero <b>JLByR</b> tiene la caja más baja y
+          <b>Cerro Colorado</b> acumula 5 productos en stock crítico. Tu <b>margen bruto consolidado</b> (37.5%)
+          está sano. <b>Recomendación:</b> redistribuye inventario hacia Cercado y refuerza la caja de JLByR
+          antes del fin de semana.
+        </p>
+      </div>
+
+      <!-- CONSOLIDADO -->
+      <div class="kpis">
+        <div class="kpi"><div class="label">Ventas hoy (todas)</div><div class="value">S/ 24 610</div><div class="delta up">↑ 9% vs ayer</div></div>
+        <div class="kpi"><div class="label">Sedes activas</div><div class="value">4 / 4</div><div class="delta up">en línea</div></div>
+        <div class="kpi"><div class="label">Inventario total</div><div class="value">S/ 312k</div><div class="delta up">valorizado</div></div>
+        <div class="kpi"><div class="label">Alertas abiertas</div><div class="value">3</div><div class="delta down">↓ requieren acción</div></div>
+      </div>
+
+      <!-- COMPARATIVO SEDES -->
+      <h2 style="margin-top:40px;">Rendimiento por sede — hoy</h2>
+      <div class="appframe" style="margin-top:16px;">
+        <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="muted" style="font-size:13px;">Irbis ERP · Panel consolidado</span></div>
+        <div class="appbody">
+          <div style="display:grid;gap:16px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🏬 Cercado (principal)</span><b>S/ 9 420 · 38%</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:96%;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🏬 Cayma</span><b>S/ 6 180 · 25%</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:63%;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🏬 Cerro Colorado</span><b>S/ 5 510 · 22%</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:56%;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🏬 JLByR</span><b>S/ 3 500 · 14%</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:36%;"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;padding:0;overflow:hidden;">
+        <table class="data">
+          <thead><tr><th>Sede</th><th>Ventas hoy</th><th>Caja</th><th>Stock crítico</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Cercado (principal)</td><td>S/ 9 420</td><td>S/ 4 100</td><td>2 productos</td><td><span class="pill green">Normal</span></td></tr>
+            <tr><td>Cayma</td><td>S/ 6 180</td><td>S/ 2 950</td><td>0 productos</td><td><span class="pill green">Normal</span></td></tr>
+            <tr><td>Cerro Colorado</td><td>S/ 5 510</td><td>S/ 1 200</td><td>5 productos</td><td><span class="pill amber">Reponer stock</span></td></tr>
+            <tr><td>JLByR</td><td>S/ 3 500</td><td>S/ 980</td><td>1 producto</td><td><span class="pill red">Caja baja</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CONTABILIDAD CONSOLIDADA -->
+      <div class="two-col" style="margin-top:30px;">
+        <div class="card">
+          <h3 style="font-size:18px;">Contabilidad consolidada</h3>
+          <p class="muted" style="font-size:13px;margin:4px 0 14px;">Una sola vista; ya no llevas la contabilidad separada por sede.</p>
+          <div style="display:grid;gap:8px;font-size:14px;">
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Ventas del mes (4 sedes)</span><b>S/ 642 300</b></div>
+            <div style="display:flex;justify-content:space-between;"><span class="muted">IGV por pagar</span><span>S/ 97 978</span></div>
+            <div style="display:flex;justify-content:space-between;"><span class="muted">Costo de ventas</span><span>S/ 401 200</span></div>
+            <div style="display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:8px;"><span class="muted">Margen bruto</span><b style="color:var(--accent);">S/ 241 100 · 37.5%</b></div>
+          </div>
+        </div>
+
+        <!-- CHATBOT CON ACCIONES -->
+        <div class="ai-box">
+          <div class="ai-head">🤖 Asistente IA que ejecuta acciones <span class="pill indigo" style="margin-left:6px;">Plan Oro</span></div>
+          <div style="display:grid;gap:10px;margin-top:6px;font-size:14px;">
+            <div style="background:var(--card);border:1px solid var(--line);border-radius:10px 10px 10px 2px;padding:10px 12px;align-self:flex-end;max-width:80%;">
+              "Transfiere 30 sacos de cemento de Cayma a Cerro Colorado"
+            </div>
+            <div style="background:rgba(94,169,232,.12);border:1px solid rgba(94,169,232,.35);border-radius:10px 10px 2px 10px;padding:10px 12px;max-width:88%;">
+              ✅ Hecho. Transferencia <b>#TR-0912</b> registrada: 30 sacos Cemento Yura salen de
+              <b>Cayma</b> (quedan 210) e ingresan a <b>Cerro Colorado</b> (sube a 72).
+              <div style="margin-top:6px;" class="pill green">Acción ejecutada en el sistema</div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:12px;margin-top:12px;">El asistente registra inventario, transfiere stock entre sedes y activa usuarios — no solo responde, actúa.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:28px;background:linear-gradient(135deg,rgba(94,169,232,.18),rgba(18,58,93,.08));">
+        <h3 style="font-size:19px;">¿Necesitas IA en la nube, predicción de ventas y soporte 24/7?</h3>
+        <p class="muted" style="margin-top:6px;font-size:14px;">El <b>Plan Diamante</b> suma inteligencia de mercado (Google Trends), predicción de ventas, campañas automáticas de WhatsApp y agentes de IA a medida.</p>
+        <a class="btn btn-primary" style="margin-top:14px;align-self:flex-start;" href="../index.html#planes">Comparar Oro vs Diamante</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/app.js"></script>
+  <script>document.getElementById("banner").innerHTML = demoBanner("Así consolidas todas tus sedes en una pantalla.");</script>
+</body>
+</html>

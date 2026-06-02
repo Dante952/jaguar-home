@@ -1,133 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>#000000</title>
-    <link type="image/x-icon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkYGD4z0ABYBw1gGE0DBhGw4BhWIQBAE5OEAELnjVHAAAAAElFTkSuQmCC">
-    <style>
-        :root {
-            --color: #000000;
-            --color-transparent: #00000022;
-        }
-
-        ::selection {
-            background: var(--color-transparent);
-        }
-
-        html,
-        body {
-            background: var(--color);
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        #color {
-            background: white;
-            color: var(--color);
-            font-size: 2.5rem;
-            font-weight: 300;
-            padding: 2.25rem 3rem;
-            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-            cursor: text;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irbis Tech Solutions ERP — Planes · SUNAT + IA para tu negocio en Arequipa</title>
+  <meta name="description" content="ERP en la nube de Irbis Tech Solutions con facturación electrónica SUNAT e inteligencia artificial. Planes Base, Plata, Oro y Diamante para negocios de Arequipa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+<body data-page="planes" data-base="">
 
-<body>
-    <p id="color">#000000</p>
-    <script>
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        }
+  <!-- HERO -->
+  <header class="section" style="padding-top:56px;padding-bottom:40px;">
+    <div class="container">
+      <span class="eyebrow">ERP en la nube · Hecho en Arequipa</span>
+      <h1 style="margin-top:14px;max-width:780px;">
+        Tu negocio facturando legal ante SUNAT,<br />
+        ordenado y con <span style="background:linear-gradient(135deg,var(--brand-2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;">inteligencia artificial</span>.
+      </h1>
+      <p class="lead" style="margin-top:18px;">
+        Cotizador, inventario, ventas, CRM y facturación electrónica en un solo sistema.
+        Por menos de lo que cuesta un empleado a medio tiempo. Elige el plan de tu negocio
+        y mira las demos por rubro.
+      </p>
+      <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#planes">Ver los planes</a>
+        <a class="btn btn-ghost" href="demos/talleres.html">Probar una demo →</a>
+      </div>
 
-        function hslToHex(h, s, l) {
-            h /= 360;
-            s /= 100;
-            l /= 100;
-            var r = void 0,
-                g = void 0,
-                b = void 0;
-            if (s === 0) {
-                r = g = b = l; // achromatic
-            } else {
-                var hue2rgb = function hue2rgb(p, q, t) {
-                    if (t < 0) t += 1;
-                    if (t > 1) t -= 1;
-                    if (t < 1 / 6) return p + (q - p) * 6 * t;
-                    if (t < 1 / 2) return q;
-                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-                    return p;
-                };
-                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-                var p = 2 * l - q;
-                r = hue2rgb(p, q, h + 1 / 3);
-                g = hue2rgb(p, q, h);
-                b = hue2rgb(p, q, h - 1 / 3);
-            }
-            var toHex = function toHex(x) {
-                var hex = Math.round(x * 255).toString(16);
-                return hex.length === 1 ? '0' + hex : hex;
-            };
-            return '#' + toHex(r) + toHex(g) + toHex(b);
-        }
+      <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:44px;gap:14px;">
+        <div class="card" style="padding:16px;"><div style="font-size:24px;font-weight:800;">SUNAT</div><div class="muted" style="font-size:13px;">Facturación electrónica incluida</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:24px;font-weight:800;">Agentes IA</div><div class="muted" style="font-size:13px;">Reportes y chatbot (Spark)</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:24px;font-weight:800;">100%</div><div class="muted" style="font-size:13px;">Infraestructura incluida</div></div>
+        <div class="card" style="padding:16px;"><div style="font-size:24px;font-weight:800;">Multi-sede</div><div class="muted" style="font-size:13px;">Consolida todas tus tiendas</div></div>
+      </div>
+    </div>
+  </header>
 
-        window.onload = function () {
-            let stopProp = function (ev) {
-                ev.stopPropagation();
-            }
+  <!-- PLANES -->
+  <section class="section" id="planes" style="padding-top:24px;">
+    <div class="container">
+      <span class="eyebrow">Planes</span>
+      <h2 style="margin-top:10px;">Un plan para cada etapa de tu negocio</h2>
+      <p class="lead" style="margin-top:12px;">
+        Cada plan incluye todo lo del anterior. El <b>precio inicial</b> es un pago único de
+        implementación; el <b>mantenimiento mensual</b> incluye la infraestructura, el soporte
+        y las actualizaciones.
+      </p>
 
-            var colorElement = document.getElementById("color");
-            colorElement.addEventListener("click", stopProp, false);
-            colorElement.addEventListener("mousedown", stopProp, false);
+      <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:30px;align-items:stretch;">
 
-            var setFavicon = function (hex) {
-                var canvas = document.createElement('canvas');
-                canvas.width = 16;
-                canvas.height = 16;
-                var ctx = canvas.getContext('2d');
-                ctx.fillStyle = hex;
-                ctx.fillRect(0, 0, 16, 16);
-                document.getElementsByTagName('link')[0].href = canvas.toDataURL("image/x-icon");
-            }
+        <!-- BASE -->
+        <div class="card" style="display:flex;flex-direction:column;border-top:3px solid var(--base);">
+          <div class="pill" style="align-self:flex-start;color:var(--base);border-color:rgba(176,141,87,.4);background:rgba(176,141,87,.10);">🥉 Base</div>
+          <h3 style="margin-top:14px;font-size:22px;">Esencial</h3>
+          <p class="muted" style="font-size:14px;margin:6px 0 14px;">Pequeños negocios. 1–3 PC, ~30 ventas/día.</p>
+          <div style="font-size:13px;color:var(--ink-soft);">Mantenimiento</div>
+          <div style="font-size:34px;font-weight:850;">S/ 450<span style="font-size:15px;font-weight:600;color:var(--ink-soft);">/mes</span></div>
+          <div class="muted" style="font-size:13px;margin-top:4px;">+ S/ 800 inicial (único)</div>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:14px;display:grid;gap:9px;">
+            <li>✅ Cotizador y órdenes</li>
+            <li>✅ Inventario / almacén</li>
+            <li>✅ CRM de clientes</li>
+            <li>✅ <b>Facturación electrónica SUNAT</b></li>
+            <li>✅ Dashboard y reportes</li>
+            <li class="muted">— Sin IA</li>
+          </ul>
+          <a class="btn btn-ghost" style="margin-top:auto;" href="demos/ferreteria.html">Ver demo</a>
+        </div>
 
-            var setRandomColor = function setRandomColor() {
-                var h = void 0,
-                    s = void 0,
-                    l = void 0;
+        <!-- PLATA -->
+        <div class="card" style="display:flex;flex-direction:column;border-top:3px solid var(--plata);">
+          <div class="pill" style="align-self:flex-start;color:var(--plata);">🥈 Plata</div>
+          <h3 style="margin-top:14px;font-size:22px;">Inteligente</h3>
+          <p class="muted" style="font-size:14px;margin:6px 0 14px;">Negocios en crecimiento. 3–6 PC.</p>
+          <div style="font-size:13px;color:var(--ink-soft);">Mantenimiento</div>
+          <div style="font-size:34px;font-weight:850;">S/ 1 000<span style="font-size:15px;font-weight:600;color:var(--ink-soft);">/mes</span></div>
+          <div class="muted" style="font-size:13px;margin-top:4px;">+ S/ 1 500 inicial (único)</div>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:14px;display:grid;gap:9px;">
+            <li>✅ Todo lo de Base</li>
+            <li>✅ <b>Reportes con IA</b> (mensual/trim/anual)</li>
+            <li>✅ Chatbot de onboarding</li>
+            <li>✅ Segmentación de clientes RFM</li>
+            <li>✅ Soporte por email</li>
+          </ul>
+          <a class="btn btn-ghost" style="margin-top:auto;" href="demos/talleres.html">Ver demo</a>
+        </div>
 
-                h = randomInt(0, 359);
-                s = randomInt(55, 75);
-                l = randomInt(40, 60);
+        <!-- ORO -->
+        <div class="card" style="display:flex;flex-direction:column;border-top:3px solid var(--oro);box-shadow:0 0 0 2px rgba(94,169,232,.45);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="pill amber">🥇 Oro</div>
+            <span class="pill indigo">Recomendado multi-sede</span>
+          </div>
+          <h3 style="margin-top:14px;font-size:22px;">Dedicado</h3>
+          <p class="muted" style="font-size:14px;margin:6px 0 14px;">Medianas-grandes. Varias sedes.</p>
+          <div style="font-size:13px;color:var(--ink-soft);">Mantenimiento</div>
+          <div style="font-size:34px;font-weight:850;">S/ 1 290<span style="font-size:15px;font-weight:600;color:var(--ink-soft);">/mes</span></div>
+          <div class="muted" style="font-size:13px;margin-top:4px;">+ S/ 2 500 inicial (único)</div>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:14px;display:grid;gap:9px;">
+            <li>✅ Todo lo de Plata</li>
+            <li>✅ <b>Infraestructura dedicada</b> + dominio propio</li>
+            <li>✅ <b>Chatbot que ejecuta acciones</b></li>
+            <li>✅ Multi-sede consolidada</li>
+            <li>✅ Soporte email + chat prioritario</li>
+          </ul>
+          <a class="btn btn-primary" style="margin-top:auto;" href="demos/multisede.html">Ver demo</a>
+        </div>
 
-                document.documentElement.style.setProperty('--color', 'hsl(' + h + ', ' + s + '%, ' + l + '%)');
-                var hex = hslToHex(h, s, l);
-                document.title = hex;
-                colorElement.innerHTML = hex;
-                document.documentElement.style.setProperty('--color-transparent', hex + '22');
+        <!-- DIAMANTE -->
+        <div class="card" style="display:flex;flex-direction:column;border-top:3px solid var(--diamante);">
+          <div class="pill" style="align-self:flex-start;color:var(--diamante);border-color:rgba(14,116,144,.4);background:rgba(14,116,144,.10);">💎 Diamante</div>
+          <h3 style="margin-top:14px;font-size:22px;">Autónomo</h3>
+          <p class="muted" style="font-size:14px;margin:6px 0 14px;">Corporativas con varias sedes.</p>
+          <div style="font-size:13px;color:var(--ink-soft);">Mantenimiento</div>
+          <div style="font-size:34px;font-weight:850;">S/ 5 900<span style="font-size:15px;font-weight:600;color:var(--ink-soft);">/mes</span></div>
+          <div class="muted" style="font-size:13px;margin-top:4px;">+ S/ 12 000 inicial</div>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:14px;display:grid;gap:9px;">
+            <li>✅ Todo lo de Oro</li>
+            <li>✅ <b>IA en la nube</b> (ChatGPT/Claude)</li>
+            <li>✅ Inteligencia de mercado + predicción</li>
+            <li>✅ Agentes de IA a medida</li>
+            <li>✅ <b>Soporte 24/7</b></li>
+          </ul>
+          <a class="btn btn-ghost" style="margin-top:auto;" href="demos/multisede.html">Ver demo</a>
+        </div>
+      </div>
 
-                setFavicon(hex);
-            };
-            setRandomColor();
+      <p class="muted" style="font-size:13px;margin-top:18px;">
+        Precios en soles (S/). La infraestructura (servidor, base de datos, dominio) está incluida en la mensualidad.
+        Descuento por pago anual: 2 meses gratis.
+      </p>
+    </div>
+  </section>
 
-            var body = document.getElementsByTagName("body")[0];
-            body.addEventListener("mousedown", function (ev) {
-                ev.preventDefault();
-            });
-            body.addEventListener("click", function () {
-                setRandomColor();
-            }, false);
-        };
-    </script>
+  <!-- SEGMENTOS -->
+  <section class="section" id="rubros" style="padding-top:10px;">
+    <div class="container">
+      <span class="eyebrow">Demos por rubro</span>
+      <h2 style="margin-top:10px;">Hecho para los negocios</h2>
+      <p class="lead" style="margin-top:12px;">Mira cómo se ve el sistema en tu rubro. Cada demo es visual, sin instalar nada.</p>
+
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:28px;">
+
+        <a class="card" href="demos/talleres.html" style="transition:.15s;">
+          <div style="font-size:30px;">🛠️</div>
+          <h3 style="margin-top:10px;font-size:19px;">Talleres y fabricación</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">Impresión 3D, carpintería, confección, metalmecánica. Río Seco y APIMA.</p>
+          <div class="chip-row" style="margin-top:12px;"><span class="tag">Base</span><span class="tag">Plata</span></div>
+          <p style="color:var(--brand-2);font-weight:700;margin-top:14px;font-size:14px;">Cotizar y costear cada pieza →</p>
+        </a>
+
+        <a class="card" href="demos/ferreteria.html" style="transition:.15s;">
+          <div style="font-size:30px;">🏪</div>
+          <h3 style="margin-top:10px;font-size:19px;">Ferreterías y distribuidoras</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">Andrés A. Cáceres, Av. Sepúlveda, Mercado Avelino. Mayoristas.</p>
+          <div class="chip-row" style="margin-top:12px;"><span class="tag">Base</span><span class="tag">Plata</span></div>
+          <p style="color:var(--brand-2);font-weight:700;margin-top:14px;font-size:14px;">Boletear y facturar SUNAT →</p>
+        </a>
+
+        <a class="card" href="demos/botica.html" style="transition:.15s;">
+          <div style="font-size:30px;">💊</div>
+          <h3 style="margin-top:10px;font-size:19px;">Boticas y minimarkets</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">Alta densidad en distritos populares de Arequipa.</p>
+          <div class="chip-row" style="margin-top:12px;"><span class="tag">Base</span></div>
+          <p style="color:var(--brand-2);font-weight:700;margin-top:14px;font-size:14px;">Control de vencimientos →</p>
+        </a>
+
+        <a class="card" href="demos/restaurante.html" style="transition:.15s;">
+          <div style="font-size:30px;">🍽️</div>
+          <h3 style="margin-top:10px;font-size:19px;">Restaurantes y cafeterías</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">Centro histórico, Yanahuara, Cayma.</p>
+          <div class="chip-row" style="margin-top:12px;"><span class="tag">Base</span></div>
+          <p style="color:var(--brand-2);font-weight:700;margin-top:14px;font-size:14px;">Insumos y ventas por turno →</p>
+        </a>
+
+        <a class="card" href="demos/multisede.html" style="transition:.15s;">
+          <div style="font-size:30px;">🏢</div>
+          <h3 style="margin-top:10px;font-size:19px;">Empresas con 2+ sedes</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">Cadenas locales, constructoras, distribuidoras regionales.</p>
+          <div class="chip-row" style="margin-top:12px;"><span class="tag">Oro</span><span class="tag">Diamante</span></div>
+          <p style="color:var(--brand-2);font-weight:700;margin-top:14px;font-size:14px;">Tiempo real por sede →</p>
+        </a>
+
+        <div class="card" style="display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,rgba(94,169,232,.20),rgba(18,58,93,.10));">
+          <h3 style="font-size:19px;">¿No ves tu rubro?</h3>
+          <p class="muted" style="font-size:14px;margin-top:6px;">El sistema se adapta a cualquier negocio con inventario y ventas.</p>
+          <a class="btn btn-primary" style="margin-top:14px;align-self:flex-start;" href="#planes">Ver planes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/app.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo · Boticas y minimarkets — Irbis Tech Solutions ERP</title>
+  <meta name="description" content="Demo de control de vencimientos, stock crítico y facturación para boticas y minimarkets de Arequipa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="botica" data-base="../">
+
+  <section class="section" style="padding:36px 0;">
+    <div class="container">
+      <span class="eyebrow">💊 Boticas y minimarkets</span>
+      <h1 style="margin-top:12px;font-size:clamp(28px,4vw,40px);">Que un producto vencido no te haga perder plata</h1>
+      <p class="lead" style="margin-top:12px;">
+        Control de vencimientos por lote, alertas de stock crítico y boletas electrónicas.
+        El sistema te avisa qué está por vencer y qué está por agotarse antes de que sea tarde.
+      </p>
+      <div style="margin-top:22px;" id="banner"></div>
+
+      <!-- IA -->
+      <div class="ai-box" style="margin-bottom:22px;">
+        <div class="ai-head">✨ Spark IA · análisis del mes</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          Tienes <b>23 productos por vencer</b> en los próximos 30 días: prioriza liquidar la <b>Amoxicilina</b>
+          (vence en 13 días) y el <b>Paracetamol</b>. Además se agotaron <b>pañales</b> y <b>mascarillas</b>,
+          que tienen alta demanda. <b>Recomendación:</b> arma un combo de descuento para lo que está por vencer
+          y repón el stock crítico esta semana.
+        </p>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><div class="label">Productos</div><div class="value">842</div><div class="delta up">catálogo activo</div></div>
+        <div class="kpi"><div class="label">Por vencer (30 días)</div><div class="value">23</div><div class="delta down">↓ liquidar pronto</div></div>
+        <div class="kpi"><div class="label">Stock crítico</div><div class="value">11</div><div class="delta down">↓ reponer</div></div>
+        <div class="kpi"><div class="label">Ventas hoy</div><div class="value">S/ 1 740</div><div class="delta up">↑ 8%</div></div>
+      </div>
+
+      <!-- VENCIMIENTOS -->
+      <h2 style="margin-top:40px;">Control de vencimientos por lote</h2>
+      <div class="appframe" style="margin-top:16px;">
+        <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="muted" style="font-size:13px;">Irbis ERP · Vencimientos</span></div>
+        <div class="appbody" style="padding:0;">
+          <table class="data">
+            <thead><tr><th>Producto</th><th>Lote</th><th>Stock</th><th>Vence</th><th>Días</th><th>Acción</th></tr></thead>
+            <tbody>
+              <tr><td>Amoxicilina 500mg x100</td><td>L-2291</td><td>3 cajas</td><td>15/06/2026</td><td>13</td><td><span class="pill red">Liquidar ya</span></td></tr>
+              <tr><td>Paracetamol 500mg x100</td><td>L-1840</td><td>7 cajas</td><td>28/06/2026</td><td>26</td><td><span class="pill amber">Promocionar</span></td></tr>
+              <tr><td>Ibuprofeno 400mg x100</td><td>L-3102</td><td>5 cajas</td><td>10/07/2026</td><td>38</td><td><span class="pill amber">Vigilar</span></td></tr>
+              <tr><td>Vitamina C 1g x30</td><td>L-2755</td><td>12 frascos</td><td>02/09/2026</td><td>92</td><td><span class="pill green">OK</span></td></tr>
+              <tr><td>Alcohol en gel 1L</td><td>L-0918</td><td>20 und</td><td>14/12/2026</td><td>195</td><td><span class="pill green">OK</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:30px;">
+        <!-- STOCK CRITICO -->
+        <div>
+          <h2 style="font-size:24px;">Stock crítico</h2>
+          <div class="card" style="margin-top:14px;padding:0;overflow:hidden;">
+            <table class="data">
+              <thead><tr><th>Producto</th><th>Stock</th><th>Mínimo</th></tr></thead>
+              <tbody>
+                <tr><td>Pañales talla M x40</td><td><b style="color:#b91c1c;">2</b></td><td>10</td></tr>
+                <tr><td>Suero fisiológico 1L</td><td><b style="color:#b91c1c;">4</b></td><td>15</td></tr>
+                <tr><td>Mascarillas x50</td><td><b style="color:#b91c1c;">1</b></td><td>8</td></tr>
+                <tr><td>Termómetro digital</td><td><b style="color:var(--oro);">3</b></td><td>5</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BOLETA -->
+        <div>
+          <h2 style="font-size:24px;">Boleta electrónica</h2>
+          <div class="card" style="margin-top:14px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div><b>BOLETA</b><div class="muted" style="font-size:13px;">B001 - 015230</div></div>
+              <span class="pill green">✓ SUNAT</span>
+            </div>
+            <div style="margin-top:12px;border-top:1px solid var(--line);padding-top:12px;display:grid;gap:5px;font-size:13px;">
+              <div style="display:flex;justify-content:space-between;"><span>Paracetamol 500mg x1</span><span>S/ 2.50</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Alcohol en gel 250ml</span><span>S/ 8.00</span></div>
+              <div style="display:flex;justify-content:space-between;"><span>Vitamina C x10</span><span>S/ 12.00</span></div>
+              <div style="display:flex;justify-content:space-between;font-weight:800;border-top:1px solid var(--line);padding-top:6px;margin-top:4px;"><span>Total</span><span>S/ 22.50</span></div>
+            </div>
+            <button class="btn btn-primary" style="justify-content:center;width:100%;margin-top:14px;">Emitir y enviar a SUNAT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/app.js"></script>
+  <script>document.getElementById("banner").innerHTML = demoBanner("Así controlas vencimientos, stock y emites boletas.");</script>
+</body>
+</html>

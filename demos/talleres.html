@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo · Talleres y fabricación — Irbis Tech Solutions ERP</title>
+  <meta name="description" content="Demo del cotizador y costeo por pieza para talleres de impresión 3D, carpintería, confección y metalmecánica en Arequipa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="talleres" data-base="../">
+
+  <section class="section" style="padding:36px 0;">
+    <div class="container">
+      <span class="eyebrow">🛠️ Talleres y fabricación</span>
+      <h1 style="margin-top:12px;font-size:clamp(28px,4vw,40px);">Cotiza y sabe cuánto te cuesta cada pieza</h1>
+      <p class="lead" style="margin-top:12px;">
+        Para impresión 3D, carpintería, confección y metalmecánica de Río Seco y APIMA.
+        Deja el cuaderno: arma cotizaciones en minutos, controla el material por gramo
+        y descubre el margen real de cada trabajo.
+      </p>
+      <div style="margin-top:22px;" id="banner"></div>
+
+      <!-- IA -->
+      <div class="ai-box" style="margin-bottom:22px;">
+        <div class="ai-head">✨ Spark IA · análisis del mes</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          Tus trabajos de <b>impresión 3D</b> dejan el mayor margen (41%) pero solo son el 18% de tus ventas.
+          La <b>carpintería</b> mueve más dinero pero su margen bajó del 38% al 31% este mes: el alza de la melamina
+          te está comiendo la ganancia. <b>Recomendación:</b> sube el precio de melamina 6% y promociona impresión 3D
+          a las mueblerías de APIMA.
+        </p>
+      </div>
+
+      <!-- COTIZADOR -->
+      <div class="appframe" style="margin-top:8px;">
+        <div class="appbar"><span class="dots"><i></i><i></i><i></i></span><span class="muted" style="font-size:13px;">Irbis ERP · Cotizador</span></div>
+        <div class="appbody">
+          <div class="two-col">
+            <!-- formulario -->
+            <div class="card">
+              <h3 style="font-size:18px;">Nueva cotización — Repisa de melamina</h3>
+              <p class="muted" style="font-size:13px;margin:4px 0 16px;">Carpintería · cliente: Mueblería San José</p>
+
+              <table class="data">
+                <thead><tr><th>Material / insumo</th><th>Cantidad</th><th style="text-align:right;">Costo</th></tr></thead>
+                <tbody>
+                  <tr><td>Melamina 18mm (m²)</td><td>2.4 m²</td><td style="text-align:right;">S/ 86.40</td></tr>
+                  <tr><td>Canto PVC (m)</td><td>9 m</td><td style="text-align:right;">S/ 13.50</td></tr>
+                  <tr><td>Tornillería + tarugos</td><td>1 set</td><td style="text-align:right;">S/ 7.20</td></tr>
+                  <tr><td>Mano de obra (h)</td><td>3.5 h</td><td style="text-align:right;">S/ 70.00</td></tr>
+                  <tr><td>Energía + desgaste equipo</td><td>—</td><td style="text-align:right;">S/ 9.00</td></tr>
+                </tbody>
+              </table>
+
+              <div style="display:grid;gap:8px;margin-top:16px;font-size:14px;">
+                <div style="display:flex;justify-content:space-between;"><span class="muted">Costo directo</span><b>S/ 186.10</b></div>
+                <div style="display:flex;justify-content:space-between;"><span class="muted">Overhead aplicado (12%)</span><span>S/ 22.33</span></div>
+                <div style="display:flex;justify-content:space-between;"><span class="muted">Margen objetivo (35%)</span><span>S/ 73.05</span></div>
+                <div style="display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:8px;"><span class="muted">IGV (18%)</span><span>S/ 50.66</span></div>
+              </div>
+            </div>
+
+            <!-- resultado -->
+            <div style="display:grid;gap:14px;align-content:start;">
+              <div class="card" style="background:linear-gradient(135deg,rgba(18,58,93,.12),rgba(94,169,232,.12));">
+                <div class="muted" style="font-size:13px;">Precio sugerido al cliente</div>
+                <div style="font-size:40px;font-weight:850;">S/ 332.14</div>
+                <div class="pill green" style="margin-top:8px;">Margen real 35% · S/ 73.05</div>
+              </div>
+              <div class="card">
+                <div class="muted" style="font-size:13px;margin-bottom:8px;">Composición del precio</div>
+                <div style="display:grid;gap:10px;font-size:13px;">
+                  <div>Material <div class="bar"><span style="width:56%;"></span></div></div>
+                  <div>Mano de obra <div class="bar"><span style="width:21%;"></span></div></div>
+                  <div>Overhead + energía <div class="bar"><span style="width:9%;"></span></div></div>
+                  <div>Margen <div class="bar"><span style="width:14%;"></span></div></div>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="justify-content:center;">Generar cotización PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVENTARIO POR MATERIAL -->
+      <h2 style="margin-top:48px;">Inventario por material — ya no en el cuaderno</h2>
+      <p class="lead" style="margin-top:8px;">Cada cotización descuenta el material. Sabes cuánto te queda y cuándo reponer.</p>
+
+      <div class="kpis" style="margin-top:18px;">
+        <div class="kpi"><div class="label">Filamento PLA</div><div class="value">3.2 kg</div><div class="delta down">↓ stock para 4 días</div></div>
+        <div class="kpi"><div class="label">Melamina 18mm</div><div class="value">14 planchas</div><div class="delta up">OK</div></div>
+        <div class="kpi"><div class="label">Tela drill</div><div class="value">86 m</div><div class="delta up">OK</div></div>
+        <div class="kpi"><div class="label">Tubo acero 1"</div><div class="value">9 barras</div><div class="delta down">↓ bajo mínimo</div></div>
+      </div>
+
+      <div class="card" style="margin-top:18px;padding:0;overflow:hidden;">
+        <table class="data">
+          <thead><tr><th>Material</th><th>Tipo</th><th>Stock</th><th>Mínimo</th><th>Estado</th><th style="text-align:right;">Costo unit.</th></tr></thead>
+          <tbody>
+            <tr><td>Filamento PLA negro</td><td>Material (g)</td><td>3 200 g</td><td>5 000 g</td><td><span class="pill red">Reponer</span></td><td style="text-align:right;">S/ 0.09/g</td></tr>
+            <tr><td>Melamina 18mm blanca</td><td>Material (m²)</td><td>33.6 m²</td><td>10 m²</td><td><span class="pill green">OK</span></td><td style="text-align:right;">S/ 36.00/m²</td></tr>
+            <tr><td>Tela drill azulino</td><td>Material (m)</td><td>86 m</td><td>30 m</td><td><span class="pill green">OK</span></td><td style="text-align:right;">S/ 8.50/m</td></tr>
+            <tr><td>Tubo acero 1" x 6m</td><td>Material (und)</td><td>9 und</td><td>12 und</td><td><span class="pill amber">Bajo mínimo</span></td><td style="text-align:right;">S/ 42.00/und</td></tr>
+            <tr><td>Cartuchos de tinta</td><td>Insumo (und)</td><td>24 und</td><td>10 und</td><td><span class="pill green">OK</span></td><td style="text-align:right;">S/ 95.00/und</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="../assets/app.js"></script>
+  <script>document.getElementById("banner").innerHTML = demoBanner("Así cotizas y controlas tu material.");</script>
+</body>
+</html>

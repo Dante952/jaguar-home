@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo · Restaurantes y cafeterías — Irbis Tech Solutions ERP</title>
+  <meta name="description" content="Demo de control de insumos, mermas y ventas por turno para restaurantes y cafeterías de Arequipa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body data-page="restaurante" data-base="../">
+
+  <section class="section" style="padding:36px 0;">
+    <div class="container">
+      <span class="eyebrow">🍽️ Restaurantes y cafeterías</span>
+      <h1 style="margin-top:12px;font-size:clamp(28px,4vw,40px);">Controla tu cocina, turno por turno</h1>
+      <p class="lead" style="margin-top:12px;">
+        Para el Centro histórico, Yanahuara y Cayma. Mira tus ventas por turno, cuánto insumo
+        consume cada plato y dónde se te va la merma. Simple, para que lo use cualquiera de tu equipo.
+      </p>
+      <div style="margin-top:22px;" id="banner"></div>
+
+      <!-- IA -->
+      <div class="ai-box" style="margin-bottom:22px;">
+        <div class="ai-head">✨ Spark IA · análisis del mes</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          El <b>almuerzo</b> concentra el 60% de tus ventas y tus mejores márgenes están en <b>café + postre</b>
+          (70%) y <b>rocoto relleno</b> (62%). El <b>chupe de camarones</b> vende bien, pero su margen cayó por el
+          precio del camarón. <b>Recomendación:</b> crea un combo almuerzo + café para subir el ticket promedio
+          y ajusta la compra de camarón a la venta real.
+        </p>
+      </div>
+
+      <!-- VENTAS POR TURNO -->
+      <div class="kpis">
+        <div class="kpi"><div class="label">Ventas hoy</div><div class="value">S/ 3 280</div><div class="delta up">↑ 14% vs ayer</div></div>
+        <div class="kpi"><div class="label">Ticket promedio</div><div class="value">S/ 38</div><div class="delta up">↑ S/ 3</div></div>
+        <div class="kpi"><div class="label">Platos vendidos</div><div class="value">86</div><div class="delta up">turno almuerzo</div></div>
+        <div class="kpi"><div class="label">Merma del día</div><div class="value">S/ 95</div><div class="delta down">↓ 2.9% de ventas</div></div>
+      </div>
+
+      <div class="two-col" style="margin-top:22px;">
+        <div class="card">
+          <h3 style="font-size:18px;">Ventas por turno — hoy</h3>
+          <div style="display:grid;gap:14px;margin-top:16px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🌅 Desayuno (7–11h)</span><b>S/ 640</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:30%;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>☀️ Almuerzo (12–16h)</span><b>S/ 1 980</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:92%;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;"><span>🌙 Cena (18–22h)</span><b>S/ 660</b></div>
+              <div class="bar" style="margin-top:6px;"><span style="width:31%;"></span></div>
+            </div>
+          </div>
+          <p class="muted" style="font-size:13px;margin-top:16px;">El almuerzo concentra el 60% de tus ventas. Refuerza personal de 12 a 16h.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:18px;">Platos más vendidos</h3>
+          <table class="data" style="margin-top:10px;">
+            <thead><tr><th>Plato</th><th style="text-align:right;">Vendidos</th><th style="text-align:right;">Margen</th></tr></thead>
+            <tbody>
+              <tr><td>Rocoto relleno</td><td style="text-align:right;">22</td><td style="text-align:right;"><span class="pill green">62%</span></td></tr>
+              <tr><td>Adobo arequipeño</td><td style="text-align:right;">18</td><td style="text-align:right;"><span class="pill green">58%</span></td></tr>
+              <tr><td>Chupe de camarones</td><td style="text-align:right;">14</td><td style="text-align:right;"><span class="pill amber">41%</span></td></tr>
+              <tr><td>Café + postre</td><td style="text-align:right;">31</td><td style="text-align:right;"><span class="pill green">70%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INSUMOS / RECETAS -->
+      <h2 style="margin-top:44px;">Consumo de insumos por receta</h2>
+      <p class="lead" style="margin-top:8px;">Cada plato vendido descuenta sus insumos. Sabes qué te queda y cuánto cuesta cada porción.</p>
+      <div class="card" style="margin-top:16px;padding:0;overflow:hidden;">
+        <table class="data">
+          <thead><tr><th>Insumo</th><th>Stock</th><th>Consumo hoy</th><th>Costo/porción</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Camarón fresco (kg)</td><td>4.2 kg</td><td>3.1 kg</td><td>S/ 9.80</td><td><span class="pill red">Reponer mañana</span></td></tr>
+            <tr><td>Rocoto (und)</td><td>60 und</td><td>24 und</td><td>S/ 1.20</td><td><span class="pill green">OK</span></td></tr>
+            <tr><td>Queso fresco (kg)</td><td>6 kg</td><td>2.4 kg</td><td>S/ 2.10</td><td><span class="pill green">OK</span></td></tr>
+            <tr><td>Papa blanca (kg)</td><td>18 kg</td><td>7 kg</td><td>S/ 0.60</td><td><span class="pill green">OK</span></td></tr>
+            <tr><td>Café en grano (kg)</td><td>1.1 kg</td><td>0.4 kg</td><td>S/ 0.85</td><td><span class="pill amber">Bajo</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- MERMAS -->
+      <div class="ai-box" style="margin-top:28px;">
+        <div class="ai-head">⚠️ Alerta de merma</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;">
+          Esta semana botaste <b>S/ 410 en insumos</b>, sobre todo <b>camarón</b> (se compró de más el martes)
+          y <b>pan</b> del desayuno. Si ajustas la compra de camarón a la venta real del fin de semana,
+          recuperas cerca de <b>S/ 250 al mes</b>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/app.js"></script>
+  <script>document.getElementById("banner").innerHTML = demoBanner("Así ves tus ventas por turno, insumos y mermas.");</script>
+</body>
+</html>
